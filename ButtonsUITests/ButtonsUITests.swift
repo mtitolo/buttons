@@ -27,9 +27,14 @@ class ButtonsUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testOne() {
+        let app = XCUIApplication()
+        app.buttons["One"].tap()
+        
+        let aTextFieldTextField = app.textFields["A Text Field"]
+        aTextFieldTextField.tap()
+        aTextFieldTextField.typeText("asd")
+        
     }
     
 }
