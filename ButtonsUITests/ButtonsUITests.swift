@@ -30,10 +30,20 @@ class ButtonsUITests: XCTestCase {
     func testOne() {
         let app = XCUIApplication()
         app.buttons["One"].tap()
-        
+
         let aTextFieldTextField = app.textFields["A Text Field"]
         aTextFieldTextField.tap()
         aTextFieldTextField.typeText("asd")
+        
+    }
+    
+    func testTwo() {
+        let app = XCUIApplication()
+        app.buttons["Two"].tap()
+        let colorLabel = app.staticTexts["Color Label"]
+        
+        XCTAssert(colorLabel.label == "BLUE", "Color label should be pink")
+        
         
     }
     
