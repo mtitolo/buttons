@@ -42,7 +42,7 @@ class ButtonsUITests: XCTestCase {
         app.buttons["Two"].tap()
         let colorLabel = app.staticTexts["Color Label"]
         
-        XCTAssert(colorLabel.label == "BLUE", "Color label should be pink")
+        XCTAssert(colorLabel.label == "PINK", "Color label should be pink")
         
         
     }
